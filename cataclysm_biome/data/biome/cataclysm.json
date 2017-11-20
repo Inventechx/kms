@@ -1,0 +1,20 @@
+{
+   "alias": "cataclysm_biome:biome:cataclysm",
+   "type": "biome",
+   "display_name": "i18n(cataclysm_biome:data.biome.cataclysm.display_name)",
+   "description": "i18n(cataclysm_biome:data.biome.cataclysm.description)",
+   "random_location_names": [
+      "i18n(cataclysm_biome:data.biome.cataclysm.random_location_names.000)",
+      "i18n(cataclysm_biome:data.biome.cataclysm.random_location_names.001)",
+      "i18n(cataclysm_biome:data.biome.cataclysm.random_location_names.002)",
+      "i18n(cataclysm_biome:data.biome.cataclysm.random_location_names.003)"
+   ],
+   "image": "file(images/cataclysm_400x300.png)",
+   "story_board_image": "/stonehearth/data/biome/images/temperate_story_board.png",
+   "game_mode_images": {
+      "stonehearth:game_mode:normal": "/stonehearth/data/biome/images/temperate_story_normal.png",
+      "stonehearth:game_mode:hard": "/stonehearth/data/biome/images/temperate_story_normal.png"
+   },
+   "mining_loot_table": "file(cataclysm_mining_loot_table.json)",
+   "generation_file": "file(cataclysm_generation_data.json)"
+}

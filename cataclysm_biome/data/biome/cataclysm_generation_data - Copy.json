@@ -1,0 +1,472 @@
+{
+   "type": "biome_generation_data",
+   "__comment": "parameters for generating forest, flora, and water",
+   "ring_tesselation": {
+      "dirt": [
+         {
+            "__comment": "This is the thickness of the color swatch around the edge of the area... Def 8",
+            "width": 8,
+            "name": "dirt_edge_1"
+         }
+      ],
+      "grass": [
+         {
+            "__comment": "This is the thickness of the color swatch around the edge of the area... Def 4",
+            "width": 4,
+            "name": "grass_edge_1"
+         },
+         {
+            "__comment": "This is the thickness of the color swatch around the edge of the area... Def 6",
+            "width": 6,
+            "name": "grass_edge_2"
+         }
+      ],
+      "grass_hills": [
+         {
+            "__comment": "This is the thickness of the color swatch around the edge of the area... Def 3",
+            "width": 3,
+            "name": "grass_hills_edge_1"
+         },
+         {
+            "__comment": "This is the thickness of the color swatch around the edge of the area... Def 5",
+            "width": 5,
+            "name": "grass_hills_edge_2"
+         }
+      ]
+   },
+ "season": "spring",
+   "palettes": {
+      "spring": {
+         "null": "#ff00ff",
+         "unknown": "#16191B",
+         "bedrock": "#16191B",
+         "rock_layer_1": "#16191B",
+         "rock_layer_2": "#16191B",
+         "rock_layer_3": "#16191B",
+         "rock_layer_4": "#16191B",
+         "rock_layer_5": "#070A0D",
+         "rock_layer_6": "#070A0D",
+         "rock_layer_7": "#070A0D",
+         "rock_layer_8": "#070A0D",
+         "soil_light": "#525355",
+         "soil_dark": "#434546",
+         "dirt": "#525355",
+         "dirt_edge_1": "#434546",
+         "grass": "#343638",
+         "grass_edge_1": "#16191B",
+         "grass_edge_2": "#25272A",
+         "grass_hills": "#343638",
+         "grass_hills_edge_1": "#16191B",
+         "grass_hills_edge_2": "#25272A",
+         "copper_ore": "#c87533",
+         "tin_ore": "#b0a080",
+         "iron_ore": "#90b0d0",
+         "silver_ore": "#cccccc",
+         "gold_ore": "#ffd700",
+         "coal": "#021c24"
+      }
+   },
+   "terrain": {
+      "__comment": "minimum height for surface of terrain",
+      "noise_map_settings": {
+         "octaves": 2,
+         "persistence_ratio": 0.2,
+         "bandlimit": 2,
+         "__comment": "can stretch the terrain vertically to allow for long mountain ridges",
+         "aspect_ratio": 1
+      },
+      "plains_percentage": 75,
+      "height_base": 36,
+      "__comments": {
+         "valley_count": "offset of layers from base",
+         "step_count": "number of layers",
+         "step_size": "size of layer, for foothills and mountains this has to be multiple of 5"
+      },
+      "plains": {
+         "step_size": 2,
+         "valley_count": 1,
+         "step_count": 2
+      },
+      "foothills": {
+         "step_size": 5,
+         "step_count": 3
+      },
+      "mountains": {
+         "step_size": 25,
+         "step_count": 1
+      }
+   },
+   "terrain_detailer": {
+      "mountains": {
+         "__comment": "determines the height of the first layer",
+         "depth_function": {
+            "octaves": 2,
+            "persistence_ratio": 0.4,
+            "amplitude": 2.5,
+            "__comment": "determines how many adjacent blocks have the same depth",
+            "layer_thickness": 1,
+            "layer_count": 5,
+            "unit_length": 12
+         },
+         "height_function": {
+            "octaves": 4,
+            "persistence_ratio": 0.1,
+            "amplitude": 2.5,
+            "__comment": "determines how many adjacent blocks have the same depth",
+            "layer_thickness": 3,
+            "unit_length": 2
+         }
+      },
+      "foothills": {
+         "depth_function": {
+            "octaves": 4,
+            "persistence_ratio": 0.2,
+            "amplitude": 2.5,
+            "layer_thickness": 3,
+            "layer_count": 6,
+            "unit_length": 6
+         },
+         "height_function": {
+            "octaves": 4,
+            "persistence_ratio": 0.1,
+            "amplitude": 2.5,
+            "layer_thickness": 1,
+            "unit_length": 24
+         }
+      },
+      "plains": {
+         "depth_function": {
+            "layer_thickness": 1,
+            "layer_count": 1,
+            "unit_length": 8
+         },
+         "height_function": {
+            "layer_thickness": 1,
+            "unit_length": 8
+         }
+      }
+   },
+   "landscape": {
+		"has_grass": true,
+		"placement_table" : {
+			"cataclysm_biome:trees:deadoak:ancient" : {
+				"placement_type" : "single",
+				"parameters" : { "ground_radius" : 2, "exclusion_radius" : 3 }
+			},
+			"cataclysm_biome:trees:deadoak:medium" : {
+				"placement_type" : "single",
+				"parameters" : { "ground_radius" : 2, "exclusion_radius" : 3 }
+			},
+			"cataclysm_biome:trees:deadoak:large" : {
+				"placement_type" : "single",
+				"parameters" : { "ground_radius" : 2, "exclusion_radius" : 3 }
+	        	},
+         		"stonehearth:plants:brightbell": {
+            			"placement_type": "dense",
+            			"parameters": {"grid_multiple": 4,"item_density": 0.1,"exclusion_radius": 1 }
+         		},
+         		"stonehearth:plants:silkweed": {
+            			"placement_type": "dense",
+            			"parameters": {"grid_multiple": 4,"item_density": 0.1,"exclusion_radius": 1 }
+         		},
+         		"stonehearth:plants:frostsnap": {
+            			"placement_type": "dense",
+            			"parameters": {"grid_multiple": 4,"item_density": 0.1,"exclusion_radius": 1 }
+         		},
+			"stonehearth:plants:berry_bush": {
+           			"placement_type": "pattern",
+            			"parameters": {"min_rows": 2,"max_rows": 2,"min_cols": 2,"max_cols": 3,"item_spacing": 5,"item_density": 0.9 }
+        	 	},
+
+         "stonehearth:boulder:small": {
+            "placement_type": "dense",
+            "parameters": {
+               "__comment": "This appears to be the number of items which are placed across a 10x10 grid. Def 4, value 0 to 9.",
+               "grid_multiple": 4,
+               "__comment": "This appears to be a percentage chance of placing an item somewhere along a single line of that grid above. Def 0.1, value 0 to 1.",
+               "item_density": 0.1,
+               "__comment": "Unsure what this does... Def 1",
+               "exclusion_radius": 1
+            }
+         },
+         "stonehearth:boulder:medium_1": {
+            "placement_type": "single",
+            "parameters": {
+               "__comment": "This appears to be the distance around the entities (maybe?).  Going away from 1 in either direction seems to reduce the number of spawns. Def 1",
+               "ground_radius": 1,
+               "__comment": "Unsure what this does... Def 2",
+               "exclusion_radius": 2
+            }
+         },
+         "stonehearth:boulder:medium_2": {
+            "placement_type": "single",
+            "parameters": {
+               "ground_radius": 1,
+               "exclusion_radius": 2
+            }
+         },
+         "stonehearth:boulder:medium_3": {
+            "placement_type": "single",
+            "parameters": {
+               "ground_radius": 1,
+               "exclusion_radius": 2
+            }
+         },
+         "stonehearth:boulder:large_1": {
+            "placement_type": "single",
+            "parameters": {
+               "ground_radius": 2,
+               "exclusion_radius": 3
+            }
+         },
+         "stonehearth:boulder:large_2": {
+            "placement_type": "single",
+            "parameters": {
+               "ground_radius": 2,
+               "exclusion_radius": 3
+            }
+         }
+      },
+      "trees": {
+         "__comment": "tree size variance. anything above 0 will be considered as tree placement, and the size of the tree is determined within the sizes node declared above",
+         "sizes": {
+            "cataclysm_biome:trees:deadoak": {
+               "small": 0,
+               "medium": 8,
+               "large": 18,
+               "ancient": { "percentage": 10 }
+            }
+         },
+         "weights": {
+            "plains": {
+               "1": {
+                  "cataclysm_biome:trees:deadoak": 1
+               }
+            },
+            "foothills": {
+               "1": {
+                  "cataclysm_biome:trees:deadoak": 1
+               },
+               "2": {
+                  "cataclysm_biome:trees:deadoak": 1
+               }
+            },
+            "mountains": {
+               "1": {
+		  "cataclysm_biome:trees:deadoak": 1
+               },
+               "2": {
+		  "cataclysm_biome:trees:deadoak": 1
+               }
+            }
+         },    
+         "noise_map_parameters": {
+            "__comment": "gaussian function",
+            "mean_offset": {
+               "__comment": "boundary of terrain type",
+               "__comment": "This keeps trees from spawning near the border. Def -5.  Negative is detractor, positive is attractor",
+               "boundary": -5,
+               "__comment": "Appears to be the percentage of water which is surrounded by trees... Def 50",
+               "water": 30
+            },
+            "terrain_based": {
+               "plains": {
+                  "1": {
+                     "__comment": "This is a value which slides up and down the amount and size of trees. Def 1, Values 0 to 1",
+                     "density": 0,
+                     "__comment": "This value pushes tree spawns out with 0 being in the middle, positive numbers allowed. Def -40",
+                     "mean": -40,
+                     "__comment": "Standard Deviation: This value appears to be another similar adjustment to control the same as the two points above. Def 50",
+                     "std_dev": 0
+                  },
+                  "2": {
+                     "density": 1,
+                     "mean": -5,
+                     "std_dev": 50
+                  }
+               },
+               "foothills": {
+                  "1": {
+                     "density": 0.9,
+                     "mean": 15,
+                     "std_dev": 15
+                  },
+                  "2": {
+                     "density": 0.7,
+                     "mean": 8,
+                     "std_dev": 20
+                  }
+               },
+               "mountains": {
+                  "1": {
+                     "density": 0.7,
+                     "mean": 8,
+                     "std_dev": 20
+                  },
+                  "2": {
+                     "density": 0.5,
+                     "mean": 0,
+                     "std_dev": 30
+                  },
+                  "3": {
+                     "density": 0.3,
+                     "mean": -8,
+                     "std_dev": 40
+                  }
+               }
+            }
+         }
+      },
+      "berries": {
+         "placement": {
+            "uri": "stonehearth:plants:berry_bush",
+            "function": "gaussian",
+            "mean": -50,
+            "std_dev": 30,
+            "__comment": "offset of mean near different terrain/landscape - this creates a noise map based on the terrain feature chosen below",
+            "mean_offset": {
+               "tree": 100,
+               "water": 0,
+               "boundary": 0
+            },
+            "density": {
+               "plains": 0.6,
+               "foothills": 0.8,
+               "mountains": 0
+            }
+         }
+      },
+      "scattered": {
+         "plants": {
+            "__comment": "for example, a small probability with a large density would be more clustered than a large probability with small density.",
+            "weights": {
+               "plains": {
+                  "1": {
+                     "stonehearth:plants:brightbell": 1,
+                     "stonehearth:plants:silkweed": 1.5
+                  }
+               },
+               "foothills": {
+                  "1": {
+                     "stonehearth:plants:frostsnap": 1,
+                     "stonehearth:plants:brightbell": 7,
+                     "stonehearth:plants:silkweed": 1
+                  },
+                  "2": {
+                     "stonehearth:plants:frostsnap": 1,
+                     "stonehearth:plants:brightbell": 1
+                  }
+               },
+               "mountains": {
+                  "1": {
+                     "stonehearth:plants:frostsnap": 1
+                  },
+                  "3": {
+                     "stonehearth:plants:frostsnap": 1
+                  }
+               }
+            },
+            "noise_map_parameters": {
+               "mean_offset": {
+                  "tree": 0,
+                  "water": -30
+               },
+               "terrain_based": {
+                  "plains": {
+                     "1": {
+                        "probability": 0.4,
+                        "density": 0.8
+                     }
+                  },
+                  "foothills": {
+                     "1": {
+                        "probability": 0.6,
+                        "density": 0.5
+                     },
+                     "2": {
+                        "probability": 0.7,
+                        "density": 0.4
+                     }
+                  },
+                  "mountains": {
+                     "1": {
+                        "probability": 0.3,
+                        "density": 0.3
+                     },
+                     "2": {
+                        "probability": 0.3,
+                        "density": 0.3
+                     }
+                  }
+               }
+            }
+         },
+         "boulders": {
+            "namespace": "stonehearth:boulder",
+            "noise_map_parameters": {
+               "__comment": "Same as noise map parameters of plants. this is after trees, water, berries and plants are generated",
+               "terrain_based": {
+                  "plains": {
+                     "1": {
+                        "probability": 0,
+                        "density": 0.5
+                     },
+                     "2": {
+                        "probability": 0.35,
+                        "density": 0.7
+                     }
+                  },
+                  "foothills": {
+                     "1": {
+                        "probability": 0.15,
+                        "density": 0.8
+                     }
+                  },
+                  "mountains": {
+                     "1": {
+                        "probability": 0,
+                        "density": 0.8
+                     }
+                  }
+               }
+            },
+            "__comments": "approximation of percentage thresholds of boulder sizes",
+            "cutoffs": {
+               "__comment": "Def 0.2.",
+               "small": 0.2,
+               "medium": 0.4
+            }
+         }
+      },
+      "water": {
+         "__comment": "placement of water bodies occur at positive samples, parameters are for a standard simplex noise generator",
+         "depth": {
+            "__comment": "This is the exact depth of the 'shallows' sections of water.  Def 5.",
+            "shallow": 2,
+            "__comment": "This is the exact depth of the 'deep' sections of water.  Def 10.",
+            "deep": 10
+         },
+         "noise_map_settings": {
+            "__comment": "simplex noise function",
+            "__comment": "This generally creates more noisy patterns of water, below 0 removes water.  Def 0.01.",
+            "persistence_ratio": 0.01,
+            "__comment": "This value seems to be a scale where the lower it is, the more and more separate water bodies there are; the larger it is, the less and larger more connected water bodies there are.  Def 4.  Value 0 removes water.",
+            "bandlimit": 2,
+            "__comment": "The smaller the number, the more small sparse water bodies there are; the larger the less large bodies there are.  Def 4.",
+            "octaves": 4,
+            "__comment": "This is the overall value of water bodies on the map.  The higher the number, the more water bodies; the lower the number less water bodies.  Def 80.",
+            "range": 100,
+            "__comment": "Unsure what this does.  Def 1.2.",
+            "aspect_ratio": 1.2,
+            "mean": {
+               "__comment": "The larger this number, the larger the body of water in comparison to the land it is on.  Def -5.",
+               "plains": -20,
+               "__comment": "The larger this number, the larger the body of water in comparison to the land it is on.  Def -20.",
+               "foothills": -30,
+               "__comment": "The larger this number, the larger the body of water in comparison to the land it is on.  Def -18.",
+               "mountains": -40
+            }
+         }
+      }
+   }
+}

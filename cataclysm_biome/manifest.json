@@ -1,0 +1,19 @@
+{
+	"info" : {
+		"name" : "cataclysm_biome",
+		"version" : 3
+	},
+	"default_locale": "en",
+
+	"aliases": {
+		"biome:cataclysm": "file(data/biome/cataclysm.json)",
+		
+		"trees:deadoak:medium": "file(entities/trees/dead_oak/dead_mediumoak/dead_mediumoak.json)",
+		"trees:deadoak:large": "file(entities/trees/dead_oak/dead_largeoak/dead_largeoak.json)",
+		"trees:deadoak:ancient": "file(entities/trees/dead_oak/dead_ancientoak/dead_ancientoak.json)"
+	},
+
+	"mixintos" :  {
+		"stonehearth:biome:index": "file(data/biome/index.json)"
+	}
+}

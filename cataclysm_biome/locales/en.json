@@ -1,0 +1,16 @@
+{
+   "data": {
+      "biome": {
+         "cataclsym": {
+            "display_name": "Dominating cataclysm",
+            "description": "Huge cataclsym litter the surface of this land.",
+            "random_location_names": {
+               "000": "the cataclysm of Unity",
+               "001": "The cataclysm of Harmony",
+               "002": "The cataclysm of Tranquility",
+               "003": "The cataclysm of Kinship"
+            }
+         }
+      }
+   }
+}
